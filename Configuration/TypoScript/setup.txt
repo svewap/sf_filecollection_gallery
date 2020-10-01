@@ -31,3 +31,16 @@ plugin.tx_sffilecollectiongallery {
 		nestedNumberOfPages = {$plugin.tx_sffilecollectiongallery.settings.nestedNumberOfPages}
 	}
 }
+
+lib.sffilecollectiongallery = USER
+lib.sffilecollectiongallery {
+	userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+	extensionName = SfFilecollectionGallery
+	pluginName = Pifilecollectiongallery
+	vendorName = SKYFILLERS
+
+	settings < plugin.tx_sffilecollectiongallery.settings
+
+}
+
+tt_content.list.20.sffilecollectiongallery_pifilecollectiongallery < lib.sffilecollectiongallery
